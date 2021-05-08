@@ -1,0 +1,41 @@
+/* header-part */
+
+.nav{
+  background-color:white;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 30px;
+  border-bottom: #222222 10px solid;
+}
+
+
+.title{
+  color:black;
+  font-size: 40px;
+}
+
+.signup{
+  color:black;
+  font-size: 30px;
+  padding-right: 10px;
+}
+
+.login{
+  color:black;
+  font-size: 30px;
+  padding-left: 10px;
+}
+
+.username{
+  color:black;
+  font-size: 30px;
+  padding-right: 10px;
+}
+
+.logout{
+  color:black;
+  font-size: 30px;
+  padding-left: 10px;
+}
+
+/* //header-part */

@@ -1,0 +1,270 @@
+a{
+  text-decoration: none;
+}
+
+.u-line{
+  background: linear-gradient(transparent  70%, #BB0000  70%);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+
+/* top-pert */
+
+.bg{
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-image: image-url("book.jpg");
+  background-size: cover;
+  border-bottom: #666666 10px solid;
+}
+
+
+.box{
+  position: absolute;
+  width: 100%;
+  height: 600px;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  padding-top:200px;
+}
+
+.top-content{
+  color: white;
+  font-size: 55px;
+  padding: 20px 0;
+}
+
+.top-sub{
+  color: white;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.top-btn{
+  color: white;
+  font-size: 25px;
+  background-color: #BB0000;
+  border: solid 3px black;
+  padding: 10px 10px;
+}
+
+/* //top-part */
+
+/* center-part1 */
+
+.center{
+  text-align: center;
+  background-color:white;
+  padding: 10px 0 10px;
+}
+
+
+.center-content-title{
+  color: black;
+  border-bottom: thick solid #BB0000;
+  font-size: 55px;
+}
+
+.center-box{
+  background-color: white;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: #333333 10px solid;
+  padding: 20vh 0;
+}
+
+.center-sub-title{
+  margin-right: 100px;
+}
+
+.center-content{
+  color: black;
+  font-size: 45px;
+  margin-bottom: 30px;
+}
+
+.content-specific{
+  color: black;
+  font-size: 30px;
+  text-align: left;
+
+}
+
+.first-img{
+  height: 260px;
+  width: 450px;
+  /* background-color: #000000; */
+}
+
+.first-img img{
+  display: block;
+  /* opacity: 0.7; */
+  height: 260px;
+  width: 450px;
+}
+
+/* //center-part1 */
+
+/* center-part2 */
+
+.second-img{
+  height: 260px;
+  width: 450px;
+  /* background-color: #000000; */
+}
+
+.second-img img{
+  display: block;
+  /* opacity: 0.7; */
+  height: 260px;
+  width: 450px;
+}
+
+.center-sub-title-2{
+  margin-left: 100px;
+}
+
+.center-content-2{
+  color: black;
+  font-size: 45px;
+  margin-bottom: 30px;
+}
+
+.content-specific-2{
+  color: black;
+  font-size: 30px;
+  text-align: left;
+}
+
+/* //center-part2 */
+
+/* center-part3 */
+
+.center-box-3{
+  background-color: white;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: #333333 10px solid;
+  padding: 32vh 0;
+}
+
+.center-sub-title-3{
+  margin-right: 100px;
+}
+
+.center-content-3{
+  color: black;
+  font-size: 45px;
+  margin-bottom: 30px;
+}
+
+.content-specific-3{
+  color: black;
+  font-size: 30px;
+  text-align: left;
+
+}
+
+.third-img{
+  height: 300px;
+  width: 500px;
+  /* background-color: #000000; */
+}
+
+.third-img img{
+  display: block;
+  /* opacity: 0.7; */
+  height: 300px;
+  width: 500px;
+}
+
+/* //center-part3 */
+
+
+/* content-list-part */
+
+.novel-top{
+  text-align: center;
+  background-color: white;
+  padding: 10px 0 10px;
+}
+
+.novel-lists-title{
+  color: black;
+  border-bottom: thick solid #BB0000;
+  font-size: 55px;
+}
+
+.novel-contents {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+  border-bottom: #333555 10px solid;
+}
+
+.novel-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.novel-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: #FFF;
+}
+
+.novel-img-content {
+  position: relative;
+}
+
+.novel-img {
+  width: 33vh;
+  height: 33vh;
+}
+
+.novel-info {
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+}
+
+.novel-name {
+  font-size: 2.5vh;
+}
+
+.novel-detail {
+  font-size: 1.5vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.person-btn {
+  display: flex;
+  align-items: center;
+}
+
+.person-icon {
+  height: 2vh;
+  width: 2vh;
+  margin-right: 0.5vw;
+}
+
+.person-count {
+  font-size: 2vh;
+}
+
+/* //content-list-part */
+
