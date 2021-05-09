@@ -1,0 +1,109 @@
+  <%= render "share/header" %>
+
+    <div class="bg">
+      <div class="box">
+        <h2 class="top-content">〜ストリートライブ型 小説投稿サイト〜</h2>
+        <p class="top-sub">気軽に投稿。お気に入りの投稿を応援しよう！</p>
+        <%= link_to "執筆する", "#", class: 'top-btn' %>
+      </div>
+    </div>
+
+    <div class="center">
+      <h2 class="center-content-title">こんなあなたへ</h2>
+    </div>
+
+    <div class="center-box">
+      <div class="center-sub-title">
+        <h3 class="center-content">小説を書いてみたいと思ったあなた</h3>
+        <p class="content-specific">
+          執筆初心者を対象にしたサイトなので<br>
+          執筆ハードルが高くないため、<br>あなたの書きたいと思った内容が<br>
+          <span class="u-line">すぐ投稿できます。</span>
+        </p>
+      </div>
+      <div class="first-img">
+        <%= image_tag "first_image.jpg" %>
+      </div>
+    </div>
+
+    <div class="center-box">
+      <div class="second-img">
+        <%= image_tag "second_image.jpg" %>
+      </div>
+      <div class="center-sub-title-2">
+        <h3 class="center-content-2">ゆっくり読む時間がないあなた</h3>
+        <p class="content-specific-2">
+          音声読み上げ機能が搭載されているので、<br>
+          他の作業を行いながら<span class="u-line">聞き流すことができます。</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="center-box-3">
+      <div class="center-sub-title-3">
+        <h3 class="center-content-3">副業レベルの文章は<br>ちょっとというあなた</h3>
+        <p class="content-specific-3">
+          投げ銭機能により、<br>
+          文章の値段を読者が決めてくれるため<br>文章を投稿する際に<br>
+          <span class="u-line">気負いすることなく</span>投稿できます。<br>
+          また、もし投稿した文章が共感を呼べば、<br>
+          <span class="u-line">チップをゲットできる</span>かもしれません。
+        </p>
+      </div>
+      <div class="third-img">
+        <%= image_tag "third_image.jpg" %>
+      </div>
+    </div>
+
+    <div class="novel-top">
+      <h2 class="novel-lists-title">＜投稿一覧＞</h2>
+    </div>
+
+    <div class='novel-contents'>
+      <ul class='novel-lists'>
+        <li class='list'>
+          <%= link_to "#" do %>
+          <div class='novel-img-content'>
+            <%= image_tag "sample.jpg", class: "novel-img" %> 
+          </div>
+          <div class='novel-info'>
+            <h3 class='novel-name'>
+              <%= "小説名" %>
+            </h3>
+            <div class='novel-detail'>
+              <span><%= "作者名" %><br><%= '投稿日時' %></span>
+              <div class='person-btn'>
+                <%= image_tag "person.jpg", class:"person-icon" %>
+                <span class='person-count'>0</span>
+              </div>
+            </div>
+          </div>
+          <% end %>
+        </li>
+  
+  
+        <!--<%# 商品がない場合は以下のダミー商品が表示されるようにしましょう %>
+        <%# 商品がある場合は表示されないようにしましょう %>-->
+        <li class='list'>
+          <%= link_to '#' do %>
+          <%= image_tag "book.jpg", class: "novel-img" %>
+          <div class='novel-info'>
+            <h3 class='novel-name'>
+              小説を投稿してね！
+            </h3>
+            <div class='novel-detail'>
+              <span>天鳳 緑一<br>2020/2/2</span>
+              <div class='person-btn'>
+                <%= image_tag "person.jpg", class:"person-icon" %>
+                <span class='person-count'>0</span>
+              </div>
+            </div>
+          </div>
+          <% end %>
+        </li>
+         <%# //商品がある場合は表示されないようにしましょう %>
+        <%# //商品がない場合は以下のダミー商品が表示されるようにしましょう %>
+      </ul>
+    </div>
+
+  <%= render "share/footer" %>
