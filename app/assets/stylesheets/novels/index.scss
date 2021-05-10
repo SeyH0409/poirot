@@ -6,12 +6,6 @@ a{
   background: linear-gradient(transparent  70%, #BB0000  70%);
 }
 
-ul {
-  list-style: none;
-  display: flex;
-}
-
-
 /* top-pert */
 
 .bg{
@@ -218,6 +212,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  list-style: none;
 }
 
 .novel-lists>.list {

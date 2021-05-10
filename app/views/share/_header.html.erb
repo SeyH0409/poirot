@@ -2,12 +2,15 @@
       <div class="nav">
         <div class="title">poirot</div>
         <ul class="links">
-          <%= link_to "新規登録", new_user_registration_path, class: 'signup' %>
-          <%= link_to "ログイン", new_user_session_path, class: 'login' %>
           <%# ログイン時表示する %>
-          <%#= link_to "ユーザー名", "#", class: 'username' %>
-          <%#= link_to "ログアウト", "#", class: 'logout' %>
+          <% if user_signed_in? %>
+            <%= link_to current_user.nickname, "#", class: 'username' %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'logout' %>
           <%# //ログイン時表示する %>
+          <% else %>
+            <%= link_to "新規登録", new_user_registration_path, class: 'signup' %>
+            <%= link_to "ログイン", new_user_session_path, class: 'login' %>
+          <% end %>
         </ul>
       </div>
     </header>
