@@ -59,9 +59,10 @@
       <h2 class="novel-lists-title">＜投稿一覧＞</h2>
     </div>
 
-    <% @novels.each do |novel| %>
+    
     <div class='novel-contents'>
       <ul class='novel-lists'>
+        <% @novels.each do |novel| %>
         <li class='list'>
           <%= link_to "#" do %>
           <div class='novel-img-content'>
