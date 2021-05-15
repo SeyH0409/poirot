@@ -4,7 +4,7 @@
       <div class="box">
         <h2 class="top-content">〜ストリートライブ型 小説投稿サイト〜</h2>
         <p class="top-sub">気軽に投稿。お気に入りの投稿を応援しよう！</p>
-        <%= link_to "執筆する", "#", class: 'top-btn' %>
+        <%= link_to "執筆する", new_novel_path, class: 'top-btn' %>
       </div>
     </div>
 
@@ -59,19 +59,25 @@
       <h2 class="novel-lists-title">＜投稿一覧＞</h2>
     </div>
 
+    
     <div class='novel-contents'>
       <ul class='novel-lists'>
+        <% @novels.each do |novel| %>
         <li class='list'>
           <%= link_to "#" do %>
           <div class='novel-img-content'>
+            <% if novel.image.blank? %>
             <%= image_tag "sample.jpg", class: "novel-img" %> 
+            <% else %>
+            <%= image_tag novel.image, class: "novel-img" %> 
+            <% end %>
           </div>
           <div class='novel-info'>
             <h3 class='novel-name'>
-              <%= "小説名" %>
+              <%= novel.title %>
             </h3>
             <div class='novel-detail'>
-              <span><%= "作者名" %><br><%= '投稿日時' %></span>
+              <span><%= novel.user.nickname %><br><%= novel.updated_at.strftime("%Y-%m-%d %H:%M") %></span>
               <div class='person-btn'>
                 <%= image_tag "person.jpg", class:"person-icon" %>
                 <span class='person-count'>0</span>
@@ -80,10 +86,9 @@
           </div>
           <% end %>
         </li>
-  
-  
-        <!--<%# 商品がない場合は以下のダミー商品が表示されるようにしましょう %>
-        <%# 商品がある場合は表示されないようにしましょう %>-->
+        <% end %>
+
+        <% if @novels.length == 0 %>
         <li class='list'>
           <%= link_to '#' do %>
           <%= image_tag "book.jpg", class: "novel-img" %>
@@ -101,8 +106,8 @@
           </div>
           <% end %>
         </li>
-         <%# //商品がある場合は表示されないようにしましょう %>
-        <%# //商品がない場合は以下のダミー商品が表示されるようにしましょう %>
+        <% end %>
+
       </ul>
     </div>
 

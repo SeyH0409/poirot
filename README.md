@@ -30,7 +30,7 @@
 | ------------------ | ---------- | ------------------------------ |
 | user               | references | null: false, foreign_key: true |
 | novel              | references | null: false, foreign_key: true |
-| price              | integer    | null: false, foreign_key: true |
+| price              | integer    | null: false                    |
 
 ### Association
 -belongs_to :user
