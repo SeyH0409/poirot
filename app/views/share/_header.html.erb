@@ -1,12 +1,11 @@
-    <header>
+    <header class="primary-header">
       <div class="nav">
-        <div class="title">poirot</div>
+        <div class="title">poirot</div>   <%#ロゴ画像完成後↓に実装%>
+        <%#= link_to image_tag("book.jpg"), "/", class:"title" %>
         <ul class="links">
-          <%# ログイン時表示する %>
           <% if user_signed_in? %>
-            <%= link_to current_user.nickname, "#", class: 'username' %>
+            <%= link_to current_user.nickname, "/", class: 'username' %>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'logout' %>
-          <%# //ログイン時表示する %>
           <% else %>
             <%= link_to "新規登録", new_user_registration_path, class: 'signup' %>
             <%= link_to "ログイン", new_user_session_path, class: 'login' %>

@@ -1,7 +1,7 @@
 class NovelsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
   def index
-    @novels = Novel.all
+    @novels = Novel.all.order("created_at DESC")
   end
 
   def new
@@ -16,6 +16,10 @@ class NovelsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @novel = Novel.find(params[:id])
   end
 
   private

@@ -1,0 +1,54 @@
+.two-btns{
+  color: black;
+  margin: 175px 0 40px; 
+  text-align: center;
+}
+
+
+.edit-btn{
+  font-size: 30px;
+  padding-right: 10px;
+  color: white;
+  border: solid 3px black;
+  padding: 10px 10px;
+  background-color: #BB0000;
+}
+
+.destroy-btn{
+  font-size: 30px;
+  color: black;
+  border: solid 3px black;
+  padding: 10px 10px;
+}
+
+.personal-novel{
+  height: 800px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.n-title{
+  font-size: 40px;
+  font-family: 'Noto Sans JP', sans-serif;
+  padding-bottom: 30px;
+}
+
+.n-user-name{
+  padding-bottom: 100px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 20px;
+}
+
+.n-content{
+  font-size: 30px;
+  font-family: 'Noto Sans JP', sans-serif;
+  width: 40%;
+  height: 100%;
+  margin-bottom: 100px;
+}
+
+.novel-footer{
+  
+}
