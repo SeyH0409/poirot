@@ -1,17 +1,28 @@
 /* header-part */
 
+.primary-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  transition: .3s;
+}
+
 .nav{
   background-color:white;
   display: flex;
   justify-content: space-between;
-  padding: 30px 30px;
+  padding: 20px 30px;
   border-bottom: #222222 10px solid;
 }
-
 
 .title{
   color:black;
   font-size: 40px;
+  /* ロゴ画像完成後↓に切り替え */
+  /* width: 100px;
+  height: 30px; */
 }
 
 .signup{

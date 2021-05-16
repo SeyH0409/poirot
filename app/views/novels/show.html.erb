@@ -1,0 +1,26 @@
+<%= render "share/header" %>
+
+
+  <div class="two-btns">
+    <% if user_signed_in? && current_user.id == @novel.user.id %>
+      <%= link_to "添削", "#", class: "edit-btn" %>
+      <%= link_to "破棄", "#", class: "destroy-btn" %>
+    <% end %>
+  </div>
+
+  <div class="personal-novel">
+    <h1 class="n-title">
+      <%= @novel.title %>
+    </h1>
+    
+    <div class="n-user-name">
+      <%= "作者: #{@novel.user.nickname}" %>
+    </div>
+
+    <div class="n-content">
+      <%= safe_join(@novel.content.split("\n"),tag(:br)) %>
+    </div>
+  </div>
+
+
+

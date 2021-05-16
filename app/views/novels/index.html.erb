@@ -64,7 +64,7 @@
       <ul class='novel-lists'>
         <% @novels.each do |novel| %>
         <li class='list'>
-          <%= link_to "#" do %>
+          <%= link_to novel_path(novel.id) do %>
           <div class='novel-img-content'>
             <% if novel.image.blank? %>
             <%= image_tag "sample.jpg", class: "novel-img" %> 
