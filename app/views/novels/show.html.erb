@@ -2,7 +2,7 @@
 
 
   <div class="two-btns">
-    <% if current_user.id == @novel.user.id %>
+    <% if user_signed_in? && current_user.id == @novel.user.id %>
       <%= link_to "添削", "#", class: "edit-btn" %>
       <%= link_to "破棄", "#", class: "destroy-btn" %>
     <% end %>
