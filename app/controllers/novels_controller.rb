@@ -4,7 +4,7 @@ class NovelsController < ApplicationController
   before_action :unless_novel_user, only: [:destroy]
 
   def index
-    @novels = Novel.all.order("created_at DESC")
+    @novels = Novel.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -22,6 +22,7 @@ class NovelsController < ApplicationController
   end
 
   def show
+    @tips = @novel.tips.all
   end
 
   def destroy
@@ -38,6 +39,7 @@ class NovelsController < ApplicationController
   def set_novel
     @novel = Novel.find(params[:id])
   end
+
 
   def unless_novel_user
     unless current_user.id == @novel.user_id
