@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_15_061544) do
+ActiveRecord::Schema.define(version: 2021_05_21_024021) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -42,6 +42,16 @@ ActiveRecord::Schema.define(version: 2021_05_15_061544) do
     t.index ["user_id"], name: "index_novels_on_user_id"
   end
 
+  create_table "tips", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "price", null: false
+    t.bigint "user_id", null: false
+    t.bigint "novel_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["novel_id"], name: "index_tips_on_novel_id"
+    t.index ["user_id"], name: "index_tips_on_user_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -57,4 +67,6 @@ ActiveRecord::Schema.define(version: 2021_05_15_061544) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "novels", "users"
+  add_foreign_key "tips", "novels"
+  add_foreign_key "tips", "users"
 end

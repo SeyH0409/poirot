@@ -1,0 +1,56 @@
+<%= render "share/second-header" %>
+
+<div class='transaction-contents'>
+  <div class='transaction-main'>
+    <h1 class='transaction-title-text'>
+      投げ銭金額入力
+    </h1>
+
+    <%= form_with(model: @tip, local: true, url: novel_tips_path, method: :post, id: "charge-form", class: 'transaction-form-wrap') do |f|%>
+    <%= render "share/error_messages", model: f.object %>
+
+    <div class="form-group">
+      <%= f.text_field :price, class:"input-default", id:"tip-price", placeholder:"50 ~ 1000円の金額を入力  例）450", maxlength:"4" %>
+    </div>
+
+    <%# カード情報の入力 %>
+    <div class='credit-card-form'>
+      <h1 class='info-input-haedline'>
+        クレジットカード情報入力
+      </h1>
+      <div class="form-group">
+        <%= f.text_field :number, class:"input-default", id:"card-number", placeholder:"カード番号(半角英数字)", maxlength:"16" %>
+
+        <div class='available-card'>
+         <%# クレカ画像をダウンロード後コメントアウトを外す %>
+          <%#= image_tag 'card-visa.gif', class: 'card-logo'%>
+          <%#= image_tag 'card-mastercard.gif', class: 'card-logo'%>
+          <%#= image_tag 'card-jcb.gif', class: 'card-logo'%>
+          <%#= image_tag 'card-amex.gif', class: 'card-logo'%>
+         <%# //クレカ画像をダウンロード後コメントアウトを外す %>
+        </div>
+
+      </div>
+      <div class="form-group">
+        <div class='input-expiration-date-wrap'>
+          <%= f.text_area :exp_month, class:"input-expiration-date", id:"card-exp-month", placeholder:"例)3" %>
+          <p>月</p>
+          <%= f.text_area :exp_year, class:"input-expiration-date", id:"card-exp-year", placeholder:"例)23" %>
+          <p>年</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.text_field :cvc,class:"input-default", id:"card-cvc", placeholder:"カード背面4桁もしくは3桁のセキュリティ番号", maxlength:"4" %>
+      </div>
+    </div>
+    <%# /カード情報の入力 %>
+
+    <div class='buy-btn'>
+      <%= f.submit "投げる" ,class:"buy-red-btn" %>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<%= render "share/second-footer" %>
