@@ -28,7 +28,7 @@ RSpec.describe Tip, type: :model do
       it "priceが49円以下の時" do
         @tip.price = 49
         @tip.valid?
-        expect(@tip.errors.full_messages).to include("Price must be greater than 9")
+        expect(@tip.errors.full_messages).to include("Price must be greater than 49")
       end
 
       it "priceが1001円以上の時" do
