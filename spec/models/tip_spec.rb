@@ -25,8 +25,8 @@ RSpec.describe Tip, type: :model do
         expect(@tip.errors.full_messages).to include("Price is not a number")
       end
 
-      it "priceが9円以下の時" do
-        @tip.price = 9
+      it "priceが49円以下の時" do
+        @tip.price = 49
         @tip.valid?
         expect(@tip.errors.full_messages).to include("Price must be greater than 9")
       end
