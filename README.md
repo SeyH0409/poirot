@@ -4,7 +4,7 @@
 実際に文字を見ながら文章を読む時間がない人。<br>
 副業レベルのしっかりとした文章を書くのは敷居が高いと感じている人<br><br>
 
-が対象の小説投稿アプリです。
+が対象の小説投稿アプリ。
 
 [![Image from Gyazo](https://i.gyazo.com/1c7a09eca3e423f8739cfc2885c34327.jpg)](https://gyazo.com/1c7a09eca3e423f8739cfc2885c34327)
 
