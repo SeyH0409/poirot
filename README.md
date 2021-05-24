@@ -52,6 +52,9 @@ https://poirot.herokuapp.com/
 ・ruby on rails  
 ・mysql  
 
+# ER図
+[![Image from Gyazo](https://i.gyazo.com/0e04edba06390f0f3e8c02047e3c7b17.png)](https://gyazo.com/0e04edba06390f0f3e8c02047e3c7b17)
+
 # テーブル設計
 
 ## usersテーブル
