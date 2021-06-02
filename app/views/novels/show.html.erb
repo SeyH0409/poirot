@@ -9,6 +9,7 @@
     <span>支援者数:<span>
     <%= "#{@tips.count(:user_id)}名" %>
   </div>
+  
   <div class="btns">
     <% if user_signed_in? %>
       <% if current_user.id == @novel.user_id %>
@@ -20,6 +21,11 @@
     <% end %>
   </div>
 
+  <div class="voice-btn">
+    <%= button_tag "再生", {id: "read-btn", class: "start-btn"}%>
+    <%= button_tag "停止", {id: "cancel-btn", class: "fin-btn"} %>
+  </div>
+
   <div class="personal-novel">
     <h1 class="n-title">
       <%= @novel.title %>
@@ -29,7 +35,9 @@
     </div>
 
     <div class="n-content">
-      <%= safe_join(@novel.content.split("\n"),tag(:br)) %>
+      <textarea class="novel-body" id="body">
+        <%= @novel.content %>
+      </textarea>
     </div>
   </div>
 
