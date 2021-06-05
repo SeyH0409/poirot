@@ -12,14 +12,14 @@
   text-align: center;
 }
 
-.novel-sell-main {
+.novel-up-main {
   background-color: #FFF;
   width: 70vw;
   min-width: 450px;
   padding: 10vh 15vw;
 }
 
-.novel-sell-title {
+.novel-up-title {
   font-weight: bold;
   text-align: center;
   border-bottom: 1px solid red;

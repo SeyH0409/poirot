@@ -1,7 +1,7 @@
 class NovelsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_novel, only: [:show, :destroy]
-  before_action :unless_novel_user, only: [:destroy]
+  before_action :set_novel, only: [:show, :destroy, :edit, :update]
+  before_action :unless_novel_user, only: [:destroy, :edit, :update]
 
   def index
     @novels = Novel.includes(:user).order("created_at DESC")
@@ -23,6 +23,17 @@ class NovelsController < ApplicationController
 
   def show
     @tips = @novel.tips.all
+  end
+
+  def edit
+  end
+
+  def update
+    if @novel.update(novel_params)
+      redirect_to novel_path(@novel.id)
+    else
+      render :edit
+    end
   end
 
   def destroy
