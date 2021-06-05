@@ -1,0 +1,25 @@
+    <%= form_with(model: @novel, local: true) do |f| %>
+
+    <%= render 'share/error_messages', model: f.object %>
+
+    <div class="img-upload">
+      <div class="click-upload">
+        <p>
+          表紙画像
+        </p>
+        <%= f.file_field :image, id:"novel-image" %>
+      </div>
+    </div>
+
+    <div class="new-novel">
+      <%= f.text_area :title, class:"novel-title", id:"novel-name", placeholder:"タイトル" %>
+      <div class="novel-explain">
+        <%= f.text_area :content, class:"novel-content", id:"novel-body", placeholder:"本文" ,rows:"15" %>
+      </div>
+    </div>
+    
+    <div class="novel-btn-contents">
+      <%= f.submit "投稿する" ,class:"post-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <% end %>
